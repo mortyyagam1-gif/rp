@@ -220,19 +220,21 @@
         </button>
         <button class="menu-btn" onclick="switchSection('rpThemesMenu')">
             🔥 РП ситуации 
-            <span class="badge" style="background-color: #e74c3c; color: white;">4 ТЕМЫ</span>
+            <span class="badge" style="background-color: #e74c3c; color: white;">6 ТЕМ</span>
         </button>
     </div>
 
-    <!-- МЕНЮ ВЫБОРА РП СИТУАЦИЙ (Подкатегории) -->
+    <!-- МЕНЮ ВЫБОРА РП СИТУАЦИЙ -->
     <div id="rpThemesMenu" class="content-section">
-        <button class="back-btn" onclick="switchSection('mainMenu')">← Назад в главное menu</button>
+        <button class="back-btn" onclick="switchSection('mainMenu')">← Назад в главное меню</button>
         <div class="section-title">Выберите тему РП ситуации:</div>
         
         <button class="sub-btn" onclick="switchSection('themeAuto')">🚘 1. Технический осмотр автопарка</button>
         <button class="sub-btn" onclick="switchSection('themeCCTV')">📹 2. Проверка видеонаблюдения и серверов</button>
         <button class="sub-btn" onclick="switchSection('themePaper')">📁 3. Обновление канцелярии и бланков в приемной</button>
         <button class="sub-btn" onclick="switchSection('themeShop')">🏪 4. Проверка магазина на просроченную продукцию</button>
+        <button class="sub-btn" onclick="switchSection('themeEco')">🌳 5. Проверка экологического состояния водоема / парка</button>
+        <button class="sub-btn" onclick="switchSection('themeSiren')">🚨 6. Проверка системы оповещения (сирены)</button>
     </div>
 
     <!-- ТЕМА 1: ТЕХ ОСМОТР АВТОПАРКА -->
@@ -242,7 +244,7 @@
 
         <div class="step-card">
             <div class="step-num">Шаг 1 (Объявление в ООС)</div>
-            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="a1">/n Сейчас проведу вам РП Ситацию "Технический осмотр автопарка".</span></div><button class="copy-btn" onclick="copyText('a1', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="a1">/n Сейчас проведу вам РП Ситуацию "Технический осмотр автопарка".</span></div><button class="copy-btn" onclick="copyText('a1', this)">Скопировать</button></div>
         </div>
         <div class="step-card ic-style">
             <div class="step-num">Шаг 2 (Суть ситуации в IC)</div>
@@ -250,7 +252,7 @@
         </div>
         <div class="step-card ic-style">
             <div class="step-num">Шаг 3 (Приказ в IC)</div>
-            <div class="line"><div class="text-group"><span class="tag ic-tag">Ты в /s:</span><span class="code-text" id="a3">/s Проверьте состояние двигателей and уровень масла. Приступаем!</span></div><button class="copy-btn ic-btn" onclick="copyText('a3', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">Ты в /s:</span><span class="code-text" id="a3">/s Проверьте состояние двигателей и уровень масла. Приступаем!</span></div><button class="copy-btn ic-btn" onclick="copyText('a3', this)">Скопировать</button></div>
         </div>
         <div class="step-card">
             <div class="step-num">Шаг 4</div>
@@ -416,7 +418,7 @@
         </div>
         <div class="step-card">
             <div class="step-num">Шаг 5</div>
-            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s5">/n Пишем: /me открыл(а) кейс, достал(а) чистые перчатки и надел(а) их</span></div><button class="copy-btn" onclick="copyText('s5', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты in /n:</span><span class="code-text" id="s5">/n Пишем: /me открыл(а) кейс, достал(а) чистые перчатки и надел(а) их</span></div><button class="copy-btn" onclick="copyText('s5', this)">Скопировать</button></div>
             <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me открыл кейс, аккуратным движением достал перчатки и надел их на руки</span></div></div>
         </div>
         <div class="step-card">
@@ -438,6 +440,84 @@
             <div class="step-num">Шаг 9 (Конец ситуации)</div>
             <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s9">/n Пишем: /me записал(а) информацию о просроченной продукции | /do Информация записана. Конец РП.</span></div><button class="copy-btn" onclick="copyText('s9', this)">Скопировать</button></div>
             <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me записал информацию о нарушениях в блокнот напоследок | /do Информация записана.</span></div></div>
+        </div>
+    </div>
+
+    <!-- ТЕМА 5: ПРОВЕРКА ЭКОЛОГИЧЕСКОГО СОСТОЯНИЯ ВОДОЕМА / ПАРКА -->
+    <div id="themeEco" class="content-section">
+        <button class="back-btn" onclick="switchSection('rpThemesMenu')">← Назад к выбору тем</button>
+        <div class="section-title">Тема: Проверка экологического состояния водоема / парка</div>
+
+        <div class="step-card">
+            <div class="step-num">Шаг 1 (Объявление в ООС)</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="e1">/n Сейчас проведу вам РП Ситуацию "Проверка экологического состояния водоема".</span></div><button class="copy-btn" onclick="copyText('e1', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Шаг 2 (Суть ситуации в IC)</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">Ты в /s:</span><span class="code-text" id="e2">/s От жителей Южного поступили жалобы на сильное загрязнение местного парка и пруда!</span></div><button class="copy-btn ic-btn" onclick="copyText('e2', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Шаг 3 (Приказ в IC)</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">Ты в /s:</span><span class="code-text" id="e3">/s Наша задача — выдвинуться на место, взять пробы воды и оценить уровень мусора. По результатам вызовем службу очистки!</span></div><button class="copy-btn ic-btn" onclick="copyText('e3', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 4</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="e4">/n Пишем: /do Стерильный контейнер и перчатки в кейсе.</span></div><button class="copy-btn" onclick="copyText('e4', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/do Стерильный контейнер и перчатки в кейсе.</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 5</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="e5">/n Пишем: /me открыл(а) кейс, надел(а) резиновые перчатки и достал(а) пластиковую колбу</span></div><button class="copy-btn" onclick="copyText('e5', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me открыл(а) кейс, надел(а) резиновые перчатки и достал(а) пластиковую колбу</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 6</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="e6">/n Пишем: /me наклонился(а) к воде, аккуратно зачерпнул(а) жидкость и герметично закрыл(а) колбу</span></div><button class="copy-btn" onclick="copyText('e6', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me наклонился(а) к воде, аккуратно зачерпнул(а) жидкость и герметично закрыл(а) колбу</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 7 (Конец ситуации)</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="e7">/n Пишем: /do Проба воды находится в контейнере. | /todo Отвезем это в лабораторию на экспертизу!*убирая кейс</span></div><button class="copy-btn" onclick="copyText('e7', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/do Проба воды находится в контейнере. Всем спасибо, конец РП.</span></div></div>
+        </div>
+    </div>
+
+    <!-- ТЕМА 6: ПРОВЕРКА СИСТЕМЫ ОПОВЕЩЕНИЯ (СИРЕНЫ) -->
+    <div id="themeSiren" class="content-section">
+        <button class="back-btn" onclick="switchSection('rpThemesMenu')">← Назад к выбору тем</button>
+        <div class="section-title">Тема: Проверка системы оповещения (сирены)</div>
+
+        <div class="step-card">
+            <div class="step-num">Шаг 1 (Объявление в ООС)</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="sr1">/n Сейчас проведу вам РП Ситуацию "Проверка системы экстренного оповещения".</span></div><button class="copy-btn" onclick="copyText('sr1', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Шаг 2 (Суть ситуации в IC)</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">Ты в /s:</span><span class="code-text" id="sr2">/s Состав, поступил приказ от МЧС проверить городские системы экстренного оповещения!</span></div><button class="copy-btn ic-btn" onclick="copyText('sr2', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Шаг 3 (Приказ в IC)</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">Ты в /s:</span><span class="code-text" id="sr3">/s Нам нужно протестировать пульт управления сиреной. Включаем тестовый режим, реальную тревогу не объявлять!</span></div><button class="copy-btn ic-btn" onclick="copyText('sr3', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 4</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="sr4">/n Пишем: /do Ключ-карта от терминала безопасности в кармане пиджака.</span></div><button class="copy-btn" onclick="copyText('sr4', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/do Ключ-карта от терминала безопасности в кармане пиджака.</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 5</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="sr5">/n Пишем: /me достал(а) ключ-карту и приложил(а) её к валидатору на щитке</span></div><button class="copy-btn" onclick="copyText('sr5', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me достал(а) ключ-карту и приложил(а) её к валидатору на щитке</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 6</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="sr6">/n Пишем: /me зашел(шла) в инженерное меню и запустил(а) беззвучный тест частот</span></div><button class="copy-btn" onclick="copyText('sr6', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me зашел(шла) в инженерное меню и запустил(а) беззвучный тест частот</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 7 (Конец ситуации)</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="sr7">/n Пишем: /do На экране надпись: "Тест системы пройден". | /todo Все динамики работают исправно!*извлекая карту</span></div><button class="copy-btn" onclick="copyText('sr7', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/do На экране надпись: "Тест системы пройден". Конец РП.</span></div></div>
         </div>
     </div>
 </div>
@@ -467,4 +547,5 @@ function copyText(elementId, button) {
 </script>
 
 </body>
-                </html>
+</html>
+
