@@ -140,8 +140,8 @@
             min-width: 80px;
             font-size: 14px;
         }
-        .leader { color: #2ecc71; }
-        .member { color: #3498db; }
+        .leader { color: #3498db; }
+        .member { color: #2ecc71; }
         .ic-tag { color: #e67e22; }
         
         .code-text {
@@ -220,18 +220,19 @@
         </button>
         <button class="menu-btn" onclick="switchSection('rpThemesMenu')">
             🔥 РП ситуации 
-            <span class="badge" style="background-color: #e74c3c; color: white;">3 ТЕМЫ</span>
+            <span class="badge" style="background-color: #e74c3c; color: white;">4 ТЕМЫ</span>
         </button>
     </div>
 
     <!-- МЕНЮ ВЫБОРА РП СИТУАЦИЙ (Подкатегории) -->
     <div id="rpThemesMenu" class="content-section">
-        <button class="back-btn" onclick="switchSection('mainMenu')">← Назад в главное меню</button>
+        <button class="back-btn" onclick="switchSection('mainMenu')">← Назад в главное menu</button>
         <div class="section-title">Выберите тему РП ситуации:</div>
         
         <button class="sub-btn" onclick="switchSection('themeAuto')">🚘 1. Технический осмотр автопарка</button>
         <button class="sub-btn" onclick="switchSection('themeCCTV')">📹 2. Проверка видеонаблюдения и серверов</button>
         <button class="sub-btn" onclick="switchSection('themePaper')">📁 3. Обновление канцелярии и бланков в приемной</button>
+        <button class="sub-btn" onclick="switchSection('themeShop')">🏪 4. Проверка магазина на просроченную продукцию</button>
     </div>
 
     <!-- ТЕМА 1: ТЕХ ОСМОТР АВТОПАРКА -->
@@ -249,7 +250,7 @@
         </div>
         <div class="step-card ic-style">
             <div class="step-num">Шаг 3 (Приказ в IC)</div>
-            <div class="line"><div class="text-group"><span class="tag ic-tag">Ты в /s:</span><span class="code-text" id="a3">/s Проверьте состояние двигателей и уровень масла. Приступаем!</span></div><button class="copy-btn ic-btn" onclick="copyText('a3', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">Ты в /s:</span><span class="code-text" id="a3">/s Проверьте состояние двигателей and уровень масла. Приступаем!</span></div><button class="copy-btn ic-btn" onclick="copyText('a3', this)">Скопировать</button></div>
         </div>
         <div class="step-card">
             <div class="step-num">Шаг 4</div>
@@ -390,6 +391,55 @@
             <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/do Все столы укомплектованы новыми бланками и ручками.</span></div></div>
         </div>
     </div>
+
+    <!-- ТЕМА 4: ПРОВЕРКА МАГАЗИНА НА ПРОСРОЧКУ -->
+    <div id="themeShop" class="content-section">
+        <button class="back-btn" onclick="switchSection('rpThemesMenu')">← Назад к выбору тем</button>
+        <div class="section-title">Тема: Проверка магазина на просроченную продукцию</div>
+
+        <div class="step-card">
+            <div class="step-num">Шаг 1 (Объявление в ООС)</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s1">/n Сейчас проведу вам РП Ситуацию "Проверка магазина на просроченную продукцию".</span></div><button class="copy-btn" onclick="copyText('s1', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Шаг 2 (Суть ситуации в IC)</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">Ты в /s:</span><span class="code-text" id="s2">/s Нам поступил вызов о том, что местный магазин продаёт просроченную продукцию!</span></div><button class="copy-btn ic-btn" onclick="copyText('s2', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Шаг 3 (Приказ в IC)</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">Ты в /s:</span><span class="code-text" id="s3">/s Наша задача выехать на место и тщательно проверить весь ассортимент!</span></div><button class="copy-btn ic-btn" onclick="copyText('s3', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 4</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s4">/n Пишем: /do Чистые перчатки в кейсе.</span></div><button class="copy-btn" onclick="copyText('s4', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/do Чистые медицинские перчатки находятся в кейсе.</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 5</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s5">/n Пишем: /me открыл(а) кейс, достал(а) чистые перчатки и надел(а) их</span></div><button class="copy-btn" onclick="copyText('s5', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me открыл кейс, аккуратным движением достал перчатки и надел их на руки</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 6</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s6">/n Пишем: /me начал(а) проверять продукцию на предмет просрочки</span></div><button class="copy-btn" onclick="copyText('s6', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me протянул руку к полке и начал внимательно проверять сроки годности продукции</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 7</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s7">/n Пишем: /try Просрочка продуктов обнаружена?</span></div><button class="copy-btn" onclick="copyText('s7', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/try внимательно изучил дату изготовления на упаковке, просрочка найдена? | Удачно</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 8</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s8">/n Пишем: /me снял(а) перчатки с рук, достал(а) из кейса блокнот и ручку</span></div><button class="copy-btn" onclick="copyText('s8', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me легким движением снял перчатки, убрал их, после чего достал блокнот и ручку</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 9 (Конец ситуации)</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s9">/n Пишем: /me записал(а) информацию о просроченной продукции | /do Информация записана. Конец РП.</span></div><button class="copy-btn" onclick="copyText('s9', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me записал информацию о нарушениях в блокнот напоследок | /do Информация записана.</span></div></div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -417,4 +467,4 @@ function copyText(elementId, button) {
 </script>
 
 </body>
-</html>
+                </html>
