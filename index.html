@@ -63,7 +63,6 @@
         .sub-btn {
             border-left: 5px solid #f1c40f;
             padding: 15px;
-            font-size: 166px;
             font-size: 16px;
         }
         .menu-btn.disabled {
@@ -254,7 +253,7 @@
         <button class="sub-btn" onclick="switchSection('lecGuard')">🛡️ Лекция 5: Охрана здания Правительства</button>
     </div>
 
-    <!-- ЛЕКЦИИ КОНТЕНТ (БЕЗ ИЗМЕНЕНИЙ) -->
+    <!-- ЛЕКЦИИ КОНТЕНТ -->
     <!-- ЛЕКЦИЯ 1 -->
     <div id="lecStock" class="content-section">
         <button class="back-btn" onclick="switchSection('lecturesMenu')">← Назад к выбору лекций</button>
@@ -320,7 +319,7 @@
         <button class="sub-btn" onclick="switchSection('themeRoad')">🕳️ 7. Инспекция аварийного участка дороги</button>
     </div>
 
-    <!-- ДОРАБОТАННЫЕ РП СИТУАЦИИ С СУТЬЮ -->
+    <!-- РП СИТУАЦИИ (ОЧИЩЕННЫЕ ОТ УПОМИНАНИЙ КОМАНД) -->
     
     <!-- ТЕМА 1: ТЕХ ОСМОТР АВТОПАРКА -->
     <div id="themeAuto" class="content-section">
@@ -329,7 +328,7 @@
         
         <div class="rp-summary-box">
             <strong>Суть РП ситуации:</strong> 
-            Сотрудники Правительства строятся на парковке организации для плановой проверки служебных машин перед выездами. Каждый состав отыгрывает открытие капота, проверку уровня моторного масла с помощью щупа с использованием команд /me, /do, /try, контролируя, чтобы транспорт был технически исправен.
+            Сотрудники Правительства строятся на парковке организации для плановой проверки служебных машин перед выездами. Младший состав открывает капоты автомобилей, проверяет уровень моторного масла с помощью щупа и осматривает двигатели, контролируя, чтобы весь доступный транспорт фракции был полностью технически исправен.
         </div>
 
         <div class="step-card"><div class="step-num">Шаг 1 (Объявление в ООС)</div><div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="a1">/n Сейчас проведу вам РП Ситацию "Технический осмотр автопарка".</span></div><button class="copy-btn" onclick="copyText('a1', this)">Скопировать</button></div></div>
@@ -352,14 +351,14 @@
         
         <div class="rp-summary-box">
             <strong>Суть РП ситуации:</strong> 
-            Из-за технических сбоев в здании Правительства состав направляется к серверам безопасности. Сотрудники отыгрывают открытие ключевого шкафа, перезагрузку сетевых модулей для восстановления сигнала, а также протирают линзы внутренних камер видеонаблюдения от пыли для обеспечения четкой картинки.
+            В здании Правительства начались технические неполадки со связью, из-за чего состав направляется к главным серверам безопасности. Сотрудники открывают ключевой распределительный шкаф, проводят перезагрузку внутренних сетевых модулей для восстановления стабильного сигнала, а также очищают линзы камер видеонаблюдения от скопившейся пыли.
         </div>
 
         <div class="step-card"><div class="step-num">Шаг 1 (Объявление в ООС)</div><div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="c1">/n Сейчас проведу вам РП Ситуацию "Проверка системы видеонаблюдения".</span></div><button class="copy-btn" onclick="copyText('c1', this)">Скопировать</button></div></div>
         <div class="step-card ic-style"><div class="step-num">Шаг 2 (Суть ситуации в IC)</div><div class="line"><div class="text-group"><span class="tag ic-tag">Ты в /s:</span><span class="code-text" id="c2">/s В последнее время участились сбои в сети безопасности здания Правительства!</span></div><button class="copy-btn ic-btn" onclick="copyText('c2', this)">Скопировать</button></div></div>
         <div class="step-card ic-style"><div class="step-num">Шаг 3 (Приказ в IC)</div><div class="line"><div class="text-group"><span class="tag ic-tag">Ты в /s:</span><span class="code-text" id="c3">/s Наша задача — проверить состояние главных серверов и очистить линзы видеокамер!</span></div><button class="copy-btn ic-btn" onclick="copyText('c3', this)">Скопировать</button></div></div>
         <div class="step-card"><div class="step-num">Шаг 4</div><div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="c4">/n Пишем: /do Главный serverный шкаф закрыт на ключ.</span></div><button class="copy-btn" onclick="copyText('c4', this)">Скопировать</button></div></div>
-        <div class="step-card"><div class="step-num">Шаг 5</div><div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="c5">/n Пишем: /me достал ключ из кармана, вставил в замок и открыл дверцу шкафа</span></div><button class="copy-btn" onclick="copyText('c5', this)">Скопировать</button></div></div>
+        <div class="step-card"><div class="step-num">Шаг 5</div><div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="c5">/n Пишем: /me достал ключ из кармана, вставил в замок and открыл дверцу шкафа</span></div><button class="copy-btn" onclick="copyText('c5', this)">Скопировать</button></div></div>
         <div class="step-card"><div class="step-num">Шаг 6</div><div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="c6">/n Пишем: /try нажал на кнопку перезагрузки и восстановил соединение с сетью</span></div><button class="copy-btn" onclick="copyText('c6', this)">Скопировать</button></div></div>
         <div class="step-card"><div class="step-num">Шаг 7</div><div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="c7">/n Пишем: /me достал из кармана специальную влажную салфетку для оптики</span></div><button class="copy-btn" onclick="copyText('c7', this)">Скопировать</button></div></div>
         <div class="step-card"><div class="step-num">Шаг 8</div><div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="c8">/n Пишем: /me протянул руку к камере и аккуратно протер стеклянную линзу</span></div><button class="copy-btn" onclick="copyText('c8', this)">Скопировать</button></div></div>
@@ -369,11 +368,11 @@
     <!-- ТЕМА 3: ОБНОВЛЕНИЕ КАНЦЕЛЯРИИ И БЛАНКОВ -->
     <div id="themePaper" class="content-section">
         <button class="back-btn" onclick="switchSection('rpThemesMenu')">← Назад к выбору тем</button>
-        <div class="section-title">Тема: Обновление канцелярии и бланков</div>
+        <div class="section-title">Теma: Обновление канцелярии и бланков</div>
         
         <div class="rp-summary-box">
             <strong>Суть РП ситуации:</strong> 
-            Граждане стали жаловаться, что в приемной губернатора нет возможности написать заявление из-за отсутствия чистой бумаги. Депутат дает команду сотрудникам распаковать новые коробки с канцелярией, разложить чистые бланки по столам и проверить, все ли ручки пригодны для заполнения документов.
+            Граждане начали жаловаться на то, что в приемной губернатора невозможно написать официальное обращение из-за дефицита бумаги. Депутат поручает составу распаковать привезенные коробки с новыми бланками заявлений, распределить их по рабочим столам и проверить все пишущие принадлежности на пригодность.
         </div>
 
         <div class="step-card"><div class="step-num">Шаг 1 (Объявление в ООС)</div><div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="p1">/n Сейчас проведу вам РП Ситуацию "Обновление архивных бланков и канцелярии".</span></div><button class="copy-btn" onclick="copyText('p1', this)">Скопировать</button></div></div>
@@ -394,7 +393,7 @@
         
         <div class="rp-summary-box">
             <strong>Суть РП ситуации:</strong> 
-            Правительственный рейд по жалобам покупателей на некачественную еду. Состав выезжает в магазин 24/7, надевает защитные санитарные перчатки и инспектирует прилавки. Обнаружив просроченный товар через команду /try, сотрудники фиксируют нарушение закона в специальные блокноты для составления штрафных санкций.
+            Правительственный выездной рейд по жалобам покупателей на продажу некачественной еды. Состав прибывает в местный магазин, надевает стерильные санитарные перчатки и инспектирует торговые прилавки. В случае обнаружения испорченных товаров, сотрудники фиксируют нарушения в бланки для вынесения штрафных санкций.
         </div>
 
         <div class="step-card"><div class="step-num">Шаг 1 (Объявление в ООС)</div><div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s1">/n Сейчас проведу вам РП Ситуацию "Проверка магазина на просроченную продукцию".</span></div><button class="copy-btn" onclick="copyText('s1', this)">Скопировать</button></div></div>
@@ -416,7 +415,7 @@
         
         <div class="rp-summary-box">
             <strong>Суть РП ситуации:</strong> 
-            Экологический контроль городской среды. По сигналу жителей о загрязнении пруда, Депутат организует выезд команды к воде. Фракция отыгрывает сбор образцов: сотрудники надевают защитные средства, достают специальные стерильные колбы из кейсов, зачерпывают воду для дальнейшей передачи в независимую химическую лабораторию.
+            Плановый экологический контроль городской среды. По сигналам жителей о сильном загрязнении пруда, Депутат организует выезд команды к воде. Сотрудники проводят забор жидких образцов: надевают защитные средства, достают стерильные колбы и аккуратно зачерпывают воду для последующей передачи на экспертизу.
         </div>
 
         <div class="step-card"><div class="step-num">Шаг 1 (Объявление в ООС)</div><div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="e1">/n Сейчас проведу вам РП Ситуацию "Проверка экологического состояния водоема".</span></div><button class="copy-btn" onclick="copyText('e1', this)">Скопировать</button></div></div>
@@ -436,7 +435,7 @@
         
         <div class="rp-summary-box">
             <strong>Суть РП ситуации:</strong> 
-            В рамках совместных учений с МЧС, сотрудникам поручено проверить работоспособность систем экстренного информирования области. Состав взаимодействует с электронным щитком: с помощью ключ-карты авторизуется в системе, переходит в закрытое инженерное меню и запускает бесшумное тестирование звуковых частот, чтобы убедиться в исправности динамиков на случай ЧС.
+            В рамках совместных учений по гражданской обороне составу поручено проверить узлы экстренного оповещения населения. Сотрудники взаимодействуют с электронным терминалом: проходят авторизацию ключ-картой, открывают защищенный инженерный интерфейс и запускают беззвучный внутренний тест частот, чтобы подтвердить полную исправность громкоговорителей.
         </div>
 
         <div class="step-card"><div class="step-num">Шаг 1 (Объявление в ООС)</div><div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="sr1">/n Сейчас проведу вам РП Ситуацию "Проверка системы экстренного оповещения".</span></div><button class="copy-btn" onclick="copyText('sr1', this)">Скопировать</button></div></div>
@@ -456,7 +455,7 @@
         
         <div class="rp-summary-box">
             <strong>Суть РП ситуации:</strong> 
-            Командная инспекция дорожного покрытия. После жалоб водителей, Депутат вывозит группу для фиксации брака дороги. Роли распределены: первый сотрудник измеряет глубину ямы рулеткой, второй заносит параметры дефектов в официальный бумажный протокол, третий фотографирует трещины на камеру, а четвертый ищет скрытые расколы асфальта. Результат — готовый акт для дорожных служб.
+            Командный осмотр дефектов дорожного покрытия. После жалоб автолюбителей, Депутат везет группу на аварийную локацию. Обязанности делятся: один замеряет параметры ямы строительной рулеткой, второй вносит точные данные в протокол, третий делает фотофиксацию трещин асфальта, а четвертый проверяет прочность дорожного полотна вокруг. На выходе получается акт для дорожных служб.
         </div>
 
         <div class="step-card"><div class="step-num">Вступление (Объявление в ООС)</div><div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="rd1">/n Сейчас я проведу вам РП Ситуацию "Инспекция аварийного участка дороги".</span></div><button class="copy-btn" onclick="copyText('rd1', this)">Скопировать</button></div></div>
@@ -528,4 +527,3 @@ function copyText(elementId, button) {
 
 </body>
 </html>
-
