@@ -141,7 +141,6 @@
             font-size: 14px;
         }
         .leader { color: #3498db; }
-        .member { color: #2ecc71; }
         .ic-tag { color: #e67e22; }
         
         .code-text {
@@ -210,9 +209,9 @@
 
     <!-- ГЛАВНОЕ МЕНЮ -->
     <div id="mainMenu" class="content-section active">
-        <button class="menu-btn disabled">
+        <button class="menu-btn" onclick="switchSection('lecturesMenu')">
             📚 Лекции 
-            <span class="badge">Пока недоступно</span>
+            <span class="badge" style="background-color: #3498db; color: white;">5 ТЕМ</span>
         </button>
         <button class="menu-btn disabled">
             🏋️ Тренировки 
@@ -222,6 +221,149 @@
             🔥 РП ситуации 
             <span class="badge" style="background-color: #e74c3c; color: white;">6 ТЕМ</span>
         </button>
+    </div>
+
+    <!-- МЕНЮ ВЫБОРА ЛЕКЦИЙ -->
+    <div id="lecturesMenu" class="content-section">
+        <button class="back-btn" onclick="switchSection('mainMenu')">← Назад в главное меню</button>
+        <div class="section-title">Выберите тему лекции:</div>
+        
+        <button class="sub-btn" onclick="switchSection('lecStock')">⚔️ Лекция 1: Правила использования оружейного склада</button>
+        <button class="sub-btn" onclick="switchSection('lecWorkday')">⏰ Лекция 2: Рабочий день и прогул (ППД)</button>
+        <button class="sub-btn" onclick="switchSection('lecLine')">🧍 Лекция 3: Правила поведения в строю</button>
+        <button class="sub-btn" onclick="switchSection('lecDress')">👔 Лекция 4: Дресс-код и служебный транспорт</button>
+        <button class="sub-btn" onclick="switchSection('lecGuard')">🛡️ Лекция 5: Охрана здания Правительства</button>
+    </div>
+
+    <!-- ЛЕКЦИЯ 1: ОРУЖЕЙНЫЙ СКЛАД -->
+    <div id="lecStock" class="content-section">
+        <button class="back-btn" onclick="switchSection('lecturesMenu')">← Назад к выбору лекций</button>
+        <div class="section-title">Лекция: Правила использования оружейного склада</div>
+
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 1</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ls1">/s Сейчас я проведу лекцию на тему «Оружейный склад»!</span></div><button class="copy-btn ic-btn" onclick="copyText('ls1', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 2</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ls2">/s Брать оружие и спецсредства разрешено строго для выполнения служебных обязанностей.</span></div><button class="copy-btn ic-btn" onclick="copyText('ls2', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 3</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ls3">/s Категорически запрещено сливать склад или брать патроны без разрешения старшего состава.</span></div><button class="copy-btn ic-btn" onclick="copyText('ls3', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 4</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ls4">/s Охрана обязана использовать дубинку и пистолет только в случае явной угрозы.</span></div><button class="copy-btn ic-btn" onclick="copyText('ls4', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 5</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ls5">/s За кражу оружия со склада вы будете уволены и занесены в ЧС! Лекция окончена!</span></div><button class="copy-btn ic-btn" onclick="copyText('ls5', this)">Скопировать</button></div>
+        </div>
+    </div>
+
+    <!-- ЛЕКЦИЯ 2: РАБОЧИЙ ДЕНЬ -->
+    <div id="lecWorkday" class="content-section">
+        <button class="back-btn" onclick="switchSection('lecturesMenu')">← Назад к выбору лекций</button>
+        <div class="section-title">Лекция: Рабочий день и прогул (ППД)</div>
+
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 1</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="lw1">/s Сейчас я проведу лекцию на тему «Рабочий день»!</span></div><button class="copy-btn ic-btn" onclick="copyText('lw1', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 2</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="lw2">/s Каждый сотрудник обязан находиться на рабочем месте в установленное графиком время.</span></div><button class="copy-btn ic-btn" onclick="copyText('lw2', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 3</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="lw3">/s Прогул рабочего дня в форме или уезд по своим делам строго запрещены.</span></div><button class="copy-btn ic-btn" onclick="copyText('lw3', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Строка 4 (ООС)</div>
+            <div class="line"><div class="text-group"><span class="tag leader">В /n:</span><span class="code-text" id="lw4">/n Запрещено снимать форму во время РД без разрешения старшего состава (СС).</span></div><button class="copy-btn" onclick="copyText('lw4', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 5</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="lw5">/s За прогул и нарушение графика вы будете уволены! На этом лекция окончена!</span></div><button class="copy-btn ic-btn" onclick="copyText('lw5', this)">Скопировать</button></div>
+        </div>
+    </div>
+
+    <!-- ЛЕКЦИЯ 3: ПОВЕДЕНИЕ В СТРОЮ -->
+    <div id="lecLine" class="content-section">
+        <button class="back-btn" onclick="switchSection('lecturesMenu')">← Назад к выбору лекций</button>
+        <div class="section-title">Лекция: Правила поведения в строю</div>
+
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 1</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ll1">/s Сейчас я проведу лекцию на тему «Поведение в строю»!</span></div><button class="copy-btn ic-btn" onclick="copyText('ll1', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 2</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ll2">/s В строю запрещено разговаривать, выходить без разрешения.</span></div><button class="copy-btn ic-btn" onclick="copyText('ll2', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 3</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ll3">/s Также строго запрещено использовать любые жесты, танцевать или спать в строю.</span></div><button class="copy-btn ic-btn" onclick="copyText('ll3', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Строка 4 (ООС)</div>
+            <div class="line"><div class="text-group"><span class="tag leader">В /n:</span><span class="code-text" id="ll4">/n Запрещено уходить в АФК во время строя без предупреждения.</span></div><button class="copy-btn" onclick="copyText('ll4', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 5</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ll5">/s За нарушение данных правил вы получите наказание! Лекция окончена!</span></div><button class="copy-btn ic-btn" onclick="copyText('ll5', this)">Скопировать</button></div>
+        </div>
+    </div>
+
+    <!-- ЛЕКЦИЯ 4: ДРЕСС-КОД И ТРАНСПОРТ -->
+    <div id="lecDress" class="content-section">
+        <button class="back-btn" onclick="switchSection('lecturesMenu')">← Назад к выбору лекций</button>
+        <div class="section-title">Лекция: Дресс-код и служебный транспорт</div>
+
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 1</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ld1">/s Сейчас я проведу лекцию на тему «Дресс-код и транспорт»!</span></div><button class="copy-btn ic-btn" onclick="copyText('ld1', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 2</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ld2">/s Каждый сотрудник обязан носить только ту форму, которая положена ему по титулу.</span></div><button class="copy-btn ic-btn" onclick="copyText('ld2', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 3</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ld3">/s Брать служебный автомобиль разрешено строго с определенного титула или с разрешения СС.</span></div><button class="copy-btn ic-btn" onclick="copyText('ld3', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 4</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ld4">/s Использовать транспорт фракции в личных целях категорически запрещено.</span></div><button class="copy-btn ic-btn" onclick="copyText('ld4', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 5</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="ld5">/s За нарушение дресс-кода или автопарка последует выговор! Лекция окончена!</span></div><button class="copy-btn ic-btn" onclick="copyText('ld5', this)">Скопировать</button></div>
+        </div>
+    </div>
+
+    <!-- ЛЕКЦИЯ 5: ОХРАНА ЗДАНИЯ ПРАВИТЕЛЬСТВА -->
+    <div id="lecGuard" class="content-section">
+        <button class="back-btn" onclick="switchSection('lecturesMenu')">← Назад к выбору лекций</button>
+        <div class="section-title">Лекция: Охрана здания Правительства</div>
+
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 1</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="lg1">/s Сейчас я проведу лекцию на тему «Охрана территории»!</span></div><button class="copy-btn ic-btn" onclick="copyText('lg1', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 2</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="lg2">/s Ваша главная задача — обеспечивать безопасность сотрудников и порядка в здании.</span></div><button class="copy-btn ic-btn" onclick="copyText('lg2', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 3</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="lg3">/s Запрещено применять табельное оружие или дубинку без весомой на то причины.</span></div><button class="copy-btn ic-btn" onclick="copyText('lg3', this)">Скопировать</button></div>
+        </div>
+        <div class="step-card ic-style">
+            <div class="step-num">Строка 4</div>
+            <div class="line"><div class="text-group"><span class="tag ic-tag">В /s:</span><span class="code-text" id="lg4">/s При обнаружении нарушителей вы обязаны сначала сделать предупреждение, а затем вызвать МВД.</span></div><button class="copy-btn ic-btn" onclick="copyText('lg4', this)">Скопировать</button></div>
+        </div>
     </div>
 
     <!-- МЕНЮ ВЫБОРА РП СИТУАЦИЙ -->
@@ -315,7 +457,7 @@
         </div>
         <div class="step-card">
             <div class="step-num">Шаг 4</div>
-            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="c4">/n Пишем: /do Главный серверный шкаф закрыт на ключ.</span></div><button class="copy-btn" onclick="copyText('c4', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="c4">/n Пишем: /do Главный serverный шкаф закрыт на ключ.</span></div><button class="copy-btn" onclick="copyText('c4', this)">Скопировать</button></div>
             <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/do Главный серверный шкаф закрыт на ключ.</span></div></div>
         </div>
         <div class="step-card">
@@ -418,7 +560,7 @@
         </div>
         <div class="step-card">
             <div class="step-num">Шаг 5</div>
-            <div class="line"><div class="text-group"><span class="tag leader">Ты in /n:</span><span class="code-text" id="s5">/n Пишем: /me открыл(а) кейс, достал(а) чистые перчатки и надел(а) их</span></div><button class="copy-btn" onclick="copyText('s5', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s5">/n Пишем: /me открыл(а) кейс, достал(а) чистые перчатки и надел(а) их</span></div><button class="copy-btn" onclick="copyText('s5', this)">Скопировать</button></div>
             <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me открыл кейс, аккуратным движением достал перчатки и надел их на руки</span></div></div>
         </div>
         <div class="step-card">
@@ -437,13 +579,18 @@
             <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me легким движением снял перчатки, убрал их, после чего достал блокнот и ручку</span></div></div>
         </div>
         <div class="step-card">
-            <div class="step-num">Шаг 9 (Конец ситуации)</div>
-            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s9">/n Пишем: /me записал(а) информацию о просроченной продукции | /do Информация записана. Конец РП.</span></div><button class="copy-btn" onclick="copyText('s9', this)">Скопировать</button></div>
-            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me записал информацию о нарушениях в блокнот напоследок | /do Информация записана.</span></div></div>
+            <div class="step-num">Шаг 9</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s9">/n Пишем: /me записал(а) информацию о нарушениях в блокнот напоследок</span></div><button class="copy-btn" onclick="copyText('s9', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me записал информацию о нарушениях в блокнот напоследок</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 10 (Конец ситуации)</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="s10">/n Пишем: /do Информация записана. Всем спасибо, конец РП.</span></div><button class="copy-btn" onclick="copyText('s10', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/do Информация записана.</span></div></div>
         </div>
     </div>
 
-    <!-- ТЕМА 5: ПРОВЕРКА ЭКОЛОГИЧЕСКОГО СОСТОЯНИЯ ВОДОЕМА / ПАРКА -->
+    <!-- ТЕМА 5: ПРОВЕРКА ЭКОЛОГИЧЕСКОГО СОСТОЯНИЯ ВОДОЕМА -->
     <div id="themeEco" class="content-section">
         <button class="back-btn" onclick="switchSection('rpThemesMenu')">← Назад к выбору тем</button>
         <div class="section-title">Тема: Проверка экологического состояния водоема / парка</div>
@@ -476,8 +623,13 @@
             <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me наклонился(а) к воде, аккуратно зачерпнул(а) жидкость и герметично закрыл(а) колбу</span></div></div>
         </div>
         <div class="step-card">
-            <div class="step-num">Шаг 7 (Конец ситуации)</div>
-            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="e7">/n Пишем: /do Проба воды находится в контейнере. | /todo Отвезем это в лабораторию на экспертизу!*убирая кейс</span></div><button class="copy-btn" onclick="copyText('e7', this)">Скопировать</button></div>
+            <div class="step-num">Шаг 7</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="e7">/n Пишем: /do Проба воды находится в контейнере.</span></div><button class="copy-btn" onclick="copyText('e7', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/do Проба воды находится в контейнере.</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 8 (Конец ситуации)</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="e8">/n Пишем: /todo Отвезем это в лабораторию на экспертизу!*убирая кейс</span></div><button class="copy-btn" onclick="copyText('e8', this)">Скопировать</button></div>
             <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/do Проба воды находится в контейнере. Всем спасибо, конец РП.</span></div></div>
         </div>
     </div>
@@ -515,8 +667,13 @@
             <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/me зашел(шла) в инженерное меню и запустил(а) беззвучный тест частот</span></div></div>
         </div>
         <div class="step-card">
-            <div class="step-num">Шаг 7 (Конец ситуации)</div>
-            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="sr7">/n Пишем: /do На экране надпись: "Тест системы пройден". | /todo Все динамики работают исправно!*извлекая карту</span></div><button class="copy-btn" onclick="copyText('sr7', this)">Скопировать</button></div>
+            <div class="step-num">Шаг 7</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="sr7">/n Пишем: /do На экране надпись: "Тест системы пройден".</span></div><button class="copy-btn" onclick="copyText('sr7', this)">Скопировать</button></div>
+            <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/do На экране надпись: "Тест системы пройден".</span></div></div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">Шаг 8 (Конец ситуации)</div>
+            <div class="line"><div class="text-group"><span class="tag leader">Ты в /n:</span><span class="code-text" id="sr8">/n Пишем: /todo Все динамики работают исправно!*извлекая карту</span></div><button class="copy-btn" onclick="copyText('sr8', this)">Скопировать</button></div>
             <div class="line"><div class="text-group"><span class="tag member">Состав:</span><span class="code-text">/do На экране надпись: "Тест системы пройден". Конец РП.</span></div></div>
         </div>
     </div>
